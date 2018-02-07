@@ -1,40 +1,35 @@
 # knamean
 
-http://www.crockford.com/wrrrld/anguish.html
+- do things like the works on [Anguish Languish](http://www.crockford.com/wrrrld/anguish.html)
 
 ## Development Notes
 
-### Node
+Iterations:
+- ✔ hello world
+- ⌛ MongoDB implementation: express mongoose objects
+- ⌛ ETL: CSV to MongoDB
+- BDD with chai
+- ES implementation: analysis with ES
+- React front end
+- convert MongoDB implementation to AWS EC2
+- containerize and redeploy to AWS ECS
+- Lambda-ize where possible and redeploy
 
-Node NEXT:
-- hello world!     https://howtonode.org/hello-node
-- chai BDD   http://chaijs.com/
-- BDD: translate cloud 
+## References
 
-Node on AWS
-http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html
-
-https://www.codementor.io/mattgoldspink/nodejs-best-practices-du1086jja
-
-### Elasticsearch
-
-https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html
-
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
-
-### MongoDB
-
-MongoDB NEXT:
-- make some word count documents
-- make some word / translation documents
-
-MongoDB: on docker
-https://github.com/dockerfile/mongodb
-
-MongoDB: in cloud
-https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started
-wikiwiki!@#
-
-MongoDB on AWS
-http://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html
-
+- Node
+    - [Node on AWS](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html)
+    - [Best practices](https://www.codementor.io/mattgoldspink/nodejs-best-practices-du1086jja)
+- ElasticSearch
+    - [JavaScript API](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)
+    - [bulk loading](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
+- MongoDB
+    - [on docker](https://github.com/dockerfile/mongodb)
+    - [in cloud](https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started)
+    - [on AWS](http://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)
+- Express
+    - [Express CRUD](https://zellwk.com/blog/crud-express-mongodb/)
+    - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- Mongoose 
+    - [Mongoose start](http://mongoosejs.com/docs/guide.html)
+    

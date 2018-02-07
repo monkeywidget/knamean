@@ -10,3 +10,5 @@ var BUFFER = bufferFile(csvFileName);
 function bufferFile(relPath) {
     return fs.readFileSync(path.join(__dirname, relPath)); // zzzz....
 }
+
+// connect to mongo
