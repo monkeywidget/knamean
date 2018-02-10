@@ -24,6 +24,7 @@ Iterations:
     - [JavaScript API](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)
     - [bulk loading](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
 - MongoDB
+    - [schema examples](https://docs.mongodb.com/manual/applications/data-models/)
     - [on docker](https://github.com/dockerfile/mongodb)
     - [in cloud](https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started)
     - [on AWS](http://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)
