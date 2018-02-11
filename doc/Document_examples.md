@@ -1,3 +1,6 @@
+# Codebook
+
+- in the collection `codebook`
 
 ## Word
 
@@ -25,6 +28,10 @@
         translation: "good"
     }
 
+# Documents
+
+- in the collection `documents`
+
 ## Document
 
 - The source `document` does not change
@@ -33,17 +40,17 @@
 
     {
         document: "1984",
-        chapters: ["chapter 1","chapter 2","chapter 3"]
+        chapters: ["1984 1","1984 2","1984 3"]
     }
     
     {
-        chapter: "chapter 1",
-        paragraphs: ["paragraph 1_01","paragraph 1_02","paragraph 1_03"]
+        chapter: "1984 1",
+        paragraphs: ["1984 1 1","1984 1 2","1984 1 3"]
     }
 
 Since we don't store individual sentences this is the smallest unit we store of the original text 
 
     {
-        paragraph: "paragraph 1_01",
+        paragraph: "1984 1 1",
         text: "There's going to be a lot of text here. Hi everyone!"
     }

@@ -12,3 +12,7 @@ function bufferFile(relPath) {
 }
 
 // connect to mongo
+
+// test: load one of each object
+
+// test: print objects
