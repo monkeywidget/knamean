@@ -4,13 +4,14 @@
 
 ## Word
 
+- This is the only object that gets used in rendering translation
 - We make one of these for every `word` we translate. 
 - There may be many words translated to the same `translation`
 
 
     {
         word: "bad",
-        translation_id: "ungood"
+        translation: "ungood",
     }
 
 

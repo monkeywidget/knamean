@@ -29,12 +29,14 @@ Iterations:
     - [schema examples](https://docs.mongodb.com/manual/applications/data-models/)
 - Express
     - [Express CRUD](https://zellwk.com/blog/crud-express-mongodb/)
-    - [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
+    - [node-api](https://github.com/scotch-io/node-api) a REST example
     - [express_code_structure](https://github.com/focusaurus/express_code_structure) demo app
-    - [MEANAppsFiles](https://github.com/guyellis/MEANAppsFiles) demo app
-    - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+        - [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
+        - [MEANAppsFiles](https://github.com/joeeames/MEANAppsFiles) demo app
 - Mongoose 
+    - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
     - [Mongoose start](http://mongoosejs.com/docs/guide.html)
+    - [populate](http://mongoosejs.com/docs/populate.html) required referencing objects across collections
 - containers and AWS
     - Node
         - [Node on AWS](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html)
