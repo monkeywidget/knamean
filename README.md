@@ -6,8 +6,9 @@
 
 Iterations:
 - ✔ hello world
-- ⌛ MongoDB implementation: express mongoose objects
-- ⌛ ETL: CSV to MongoDB
+- ✔ define Mongo schema
+- ⌛ set up express with mongoose models and routes
+- ETL: CSV to MongoDB
 - BDD with chai
 - ES implementation: analysis with ES
 - React front end
@@ -28,6 +29,9 @@ Iterations:
     - [schema examples](https://docs.mongodb.com/manual/applications/data-models/)
 - Express
     - [Express CRUD](https://zellwk.com/blog/crud-express-mongodb/)
+    - [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
+    - [express_code_structure](https://github.com/focusaurus/express_code_structure) demo app
+    - [MEANAppsFiles](https://github.com/guyellis/MEANAppsFiles) demo app
     - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
 - Mongoose 
     - [Mongoose start](http://mongoosejs.com/docs/guide.html)
