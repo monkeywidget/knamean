@@ -22,11 +22,12 @@
   "dependencies": {
     "elasticsearch": "^14.1.0",
     "express": "4.15.4",
-    "express-generator": "^4.15.5",
+    "bole": "3.0.2",
     "mongoose": "^5.0.3",
     "react": "^16.2.0"
   },
   "devDependencies": {
+    "bistre": "1.0.1",
     "eslint": "^4.17.0",
     "nodemon": "^1.14.11"
   }
