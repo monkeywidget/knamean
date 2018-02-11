@@ -16,6 +16,19 @@ Iterations:
 - containerize and redeploy to AWS ECS
 - Lambda-ize where possible and redeploy
 
+## app link in node_modules 
+
+- create a symlink under node_modules for your app
+
+
+    cd node_modules && ln -nsf ../app
+
+- add just the node_modules/app symlink itself, not the entire node_modules folder, to git
+
+
+    git add -f node_modules/app
+    
+
 ## References
 
 - Node
@@ -31,8 +44,8 @@ Iterations:
     - [Express CRUD](https://zellwk.com/blog/crud-express-mongodb/)
     - [node-api](https://github.com/scotch-io/node-api) a REST example
     - [express_code_structure](https://github.com/focusaurus/express_code_structure) demo app
-        - [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
-        - [MEANAppsFiles](https://github.com/joeeames/MEANAppsFiles) demo app
+        - another [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
+        - another one at [MEANAppsFiles](https://github.com/joeeames/MEANAppsFiles) demo app
 - Mongoose 
     - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
     - [Mongoose start](http://mongoosejs.com/docs/guide.html)
