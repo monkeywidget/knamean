@@ -1,23 +1,23 @@
-var customer = require('./translation-model')
+var translation = require('./translation-model')
 var log = require('bole')('translation/router')
 var router = require('express').Router()
 
-// function getCustomers (req, res) {
-//   customer.findAll(function (error, customers) {
-//     if (error) {
-//       log.error(error, 'error finding customers')
-//       res.status(500).send(error)
-//       return
-//     }
-//     res.json(customers)
-//   })
+function getTranslations (req, res) {
+    translation.findAll(function (error, translations) {
+        if (error) {
+            log.error(error, 'error finding translations')
+            res.status(500).send(error)
+            return
+        }
+        res.json(translations)
+    })
+}
+
+// function createTranslation (req, res) {
+//     res.status(201).send()
 // }
-//
-// function createCustomer (req, res) {
-//   res.status(201).send()
-// }
-//
-// router.post('/customers', createCustomer)
-// router.get('/customers', getCustomers)
+// router.post('/translations', createTranslation)
+
+router.get('/translations', getTranslations)
 
 module.exports = router

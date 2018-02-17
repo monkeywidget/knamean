@@ -27,3 +27,14 @@ Commands in the `mongo` CLI
 
 - [db.collection.deleteOne](https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne)
 - [db.collection.deleteMany](https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany)
+
+# Import
+
+    mongoimport --db knamean --collection canon --file canon.json
+    mongoimport --db knamean --collection codebook --file codebook.json
+
+# Export
+
+    mongoexport --db knamean --collection canon --out canon.json
+    mongoexport --db knamean --collection codebook --out codebook.json
+    

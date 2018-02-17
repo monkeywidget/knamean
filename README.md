@@ -2,6 +2,19 @@
 
 - do things like the works on [Anguish Languish](http://www.crockford.com/wrrrld/anguish.html)
 
+## Install and Run
+
+### Run the server
+
+Make sure `mongod` is running!
+
+    node app/server.js
+
+### Debug: a basic request
+
+    curl http://localhost:3000/api/translations
+    
+
 ## Development Notes
 
 Iterations:
@@ -50,6 +63,9 @@ Iterations:
     - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
     - [Mongoose start](http://mongoosejs.com/docs/guide.html)
     - [populate](http://mongoosejs.com/docs/populate.html) required referencing objects across collections
+    - [mongoosatic](https://github.com/mongoosastic/mongoosastic) is Mongoose for Elasticsearch 
+        - in order to not use MongoDB at all
+        - [Mongoosastic: The Power of MongoDB & Elasticsearch Together](https://www.compose.com/articles/mongoosastic-the-power-of-mongodb-and-elasticsearch-together/)
 - containers and AWS
     - Node
         - [Node on AWS](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html)

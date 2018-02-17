@@ -14,6 +14,17 @@ if (PRODUCTION) {
   // for example
   config.express.ip = '0.0.0.0'
 }
-// config.db same deal
+
+// config.db
+
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    // we're connected!
+});
+
 // config.email etc
 // config.log

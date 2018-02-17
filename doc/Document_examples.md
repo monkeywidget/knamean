@@ -31,7 +31,7 @@
 
 # Documents
 
-- in the collection `documents`
+- in the collection `canon`
 
 ## Document
 
