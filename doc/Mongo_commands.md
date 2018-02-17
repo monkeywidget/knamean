@@ -1,4 +1,4 @@
-Commands in the `mongo` CLI
+Commands in the `mongo` CLI and in JS
 
 - [Collection Methods](https://docs.mongodb.com/manual/reference/method/js-collection/)
 
@@ -8,6 +8,11 @@ Commands in the `mongo` CLI
 - [db.collection.insertOne](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/)
 - [db.collection.insertMany](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/)
 
+in `mongo` shell:
+
+     > use knamean
+     > db.codebook.insertMany([{"translation":"good"}, {"translation":"ungood","root":"good"}])
+
 # Read
 
 - [db.collection.find](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
@@ -16,6 +21,14 @@ Commands in the `mongo` CLI
 - [db.collection.findOneAndDelete](https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndDelete/)
 - [db.collection.findOneAndReplace](https://docs.mongodb.com/manual/reference/method/db.collection.findAndReplace/)
 - [db.collection.findOneAndUpdate](https://docs.mongodb.com/manual/reference/method/db.collection.findAndUpdate/)
+
+in `mongo` shell:
+
+     > use knamean
+     > db.codebook.find( {} )
+     { "_id" : ObjectId("5a8874af8d49f317af90ab21"), "translation" : "good" }
+     { "_id" : ObjectId("5a8874af8d49f317af90ab22"), "translation" : "ungood", "root" : "good" }
+     { "_id" : ObjectId("5a887a8410230402aa6de123"), "translation" : "goodful", "root" : "good" }
 
 # Update
 
@@ -30,11 +43,24 @@ Commands in the `mongo` CLI
 
 # Import
 
-    mongoimport --db knamean --collection canon --file canon.json
-    mongoimport --db knamean --collection codebook --file codebook.json
+[`mongoimport`](https://docs.mongodb.com/manual/reference/program/mongoimport/)
+
+Without OID inputs; i.e. only data:
+
+    mongoimport --db knamean --collection codebook --jsonArray --file codebook.json
+
+Example input file:
+
+    [{"translation":"good"},
+     {"translation":"ungood","root":"good"}]
 
 # Export
 
-    mongoexport --db knamean --collection canon --out canon.json
+Creates JSON with `oid` fields
+
     mongoexport --db knamean --collection codebook --out codebook.json
     
+Example output:
+
+    {"_id":{"$oid":"5a8874028d49f317af90aaef"},"translation":"good"}
+    {"_id":{"$oid":"5a8874028d49f317af90aaf0"},"translation":"ungood","root":"good"}
