@@ -1,21 +1,10 @@
 var mongoose = require('mongoose');
 
-var translationSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+const TranslationSchema = new Schema({
     name: String
 });
 
-var Translation = mongoose.model('Translation', translationSchema);
-//Export function to create "SomeModel" model class
-// module.exports = mongoose.model('SomeModel', SomeModelSchema );
+// could add more methods here
 
-function findAll (callback) {
-    // TODO: DB / mongoose query here!
-    setImmediate(function () {
-        callback(null, [
-            {translation: "ungood", root: "good"},
-            {translation: "good"}
-        ])
-    })
-}
-
-exports.findAll = findAll
+module.exports = mongoose.model('Translation', TranslationSchema);

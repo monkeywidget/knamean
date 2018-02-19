@@ -1,9 +1,14 @@
-var translation = require('./translation-model')
+var Translation = require('./translation-model')
 var log = require('bole')('translation/router')
 var router = require('express').Router()
 
+// function createTranslation (req, res) {
+//     res.status(201).send()
+// }
+// router.post('/translations', createTranslation)
+
 function getTranslations (req, res) {
-    translation.findAll(function (error, translations) {
+    Translation.find(function (error, translations) {
         if (error) {
             log.error(error, 'error finding translations')
             res.status(500).send(error)
@@ -12,11 +17,6 @@ function getTranslations (req, res) {
         res.json(translations)
     })
 }
-
-// function createTranslation (req, res) {
-//     res.status(201).send()
-// }
-// router.post('/translations', createTranslation)
 
 router.get('/translations', getTranslations)
 

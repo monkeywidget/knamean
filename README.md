@@ -10,6 +10,14 @@ Make sure `mongod` is running!
 
     node app/server.js
 
+### Run the server with `nodemon`
+
+What this does: it restarts when there is a code change
+
+
+    ./node_modules/nodemon/bin/nodemon.js   app/server.js localhost 8080
+
+
 ### Debug: a basic request
 
     curl http://localhost:3000/api/translations
@@ -57,6 +65,7 @@ Iterations:
     - [Express CRUD](https://zellwk.com/blog/crud-express-mongodb/)
     - [node-api](https://github.com/scotch-io/node-api) a REST example
     - [express_code_structure](https://github.com/focusaurus/express_code_structure) demo app
+        - [node-express-mongoose-demo](https://github.com/madhums/node-express-mongoose-demo) includes mongoose Schema
         - another [Structure of Express/Mongoose app](https://stackoverflow.com/questions/22966854/structure-of-express-mongoose-app)
         - another one at [MEANAppsFiles](https://github.com/joeeames/MEANAppsFiles) demo app
 - Mongoose 

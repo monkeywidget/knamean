@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var app = require('./index')
+var app = require('app/index')
 var config = require('app/config')
 
 var bole = require('bole')
