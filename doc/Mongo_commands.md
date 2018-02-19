@@ -2,6 +2,12 @@ Commands in the `mongo` CLI and in JS
 
 - [Collection Methods](https://docs.mongodb.com/manual/reference/method/js-collection/)
 
+# Admin
+
+## Show all DBs
+
+    > show dbs
+
 # Create
 
 - [db.collection.insert](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
@@ -12,6 +18,14 @@ in `mongo` shell:
 
      > use knamean
      > db.codebook.insertMany([{"translation":"good"}, {"translation":"ungood","root":"good"}])
+
+in curl:
+
+    curl -H "Content-Type: application/json" \ 
+        -X POST \ 
+        -d '{"translation":"ungood", "root":"good"}' \
+        http://localhost:3000/api/translations
+
 
 # Read
 
