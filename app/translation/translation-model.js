@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const TranslationSchema = new Schema({
-    name: String
+    translation: String
 });
 
 // could add more methods here

@@ -24,7 +24,7 @@ in curl:
     curl -H "Content-Type: application/json" \ 
         -X POST \ 
         -d '{"translation":"ungood", "root":"good"}' \
-        http://localhost:3000/api/translations
+        http://localhost:3000/codebook/api/translations
 
 
 # Read

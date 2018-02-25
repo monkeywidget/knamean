@@ -20,7 +20,7 @@ What this does: it restarts when there is a code change
 
 ### Debug: a basic request
 
-    curl http://localhost:3000/api/translations
+    curl http://localhost:3000/codebook/api/translations
     
 
 ## Development Notes
@@ -54,6 +54,7 @@ Iterations:
 
 - Node
     - [Best practices](https://www.codementor.io/mattgoldspink/nodejs-best-practices-du1086jja)
+    - [Jake](http://jakejs.com/)
 - ElasticSearch
     - [JavaScript API](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)
     - [bulk loading](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
