@@ -19,11 +19,11 @@ in `mongo` shell:
      > use knamean
      > db.codebook.insertMany([{"translation":"good"}, {"translation":"ungood","root":"good"}])
 
-in curl:
+in curl: insert one:
 
     curl -H "Content-Type: application/json" \ 
         -X POST \ 
-        -d '{"translation":"ungood", "root":"good"}' \
+        -d '{"translation":"ungood"}' \
         http://localhost:3000/codebook/api/translations
 
 

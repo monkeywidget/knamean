@@ -2,37 +2,6 @@ var Translation = require('./translation-model')
 var log = require('bole')('translation/router')
 var router = require('express').Router()
 
-// TODO: this is not creating the fields properly
-// function createTranslation (req, res, next) {
-//
-//     const util = require('util')
-//     console.log(util.inspect(req, {showHidden: false, depth: null}))
-//
-//     // this doesn't have the POST in it:
-//     // var cache = [];
-//     // strigified_debug = JSON.stringify(req, function(key, value) {
-//     //     if (typeof value === 'object' && value !== null) {
-//     //         if (cache.indexOf(value) !== -1) {
-//     //             // Circular reference found, discard key
-//     //             return;
-//     //         }
-//     //         // Store value in our collection
-//     //         cache.push(value);
-//     //     }
-//     //     return value;
-//     // });
-//     // console.log("hello!!\n%s\n", strigified_debug);
-//
-//     const translation = new Translation({translation: req.translation});
-//     translation.provider = 'local';
-//     translation.save();
-//     res.json(translation);
-//     // Translation.create({translation: req.body.translation}, function (err, post) {
-//     //     if (err) return next(err);
-//     //     res.json(post);
-//     // }).save();
-// }
-
 function createTranslation (req, res, next) {
     // Create and Save a new Note
     if(!req.body) {
@@ -43,7 +12,6 @@ function createTranslation (req, res, next) {
         return;
     }
 
-    // TODO: handle if there is a "root" property
     var translation = new Translation({translation: req.body.translation || "no translation here"});
 
     translation.save(function(err, data) {
