@@ -3,7 +3,6 @@ var log = require('bole')('translation/router')
 var router = require('express').Router()
 
 function createTranslation (req, res, next) {
-    // Create and Save a new Note
     if(!req.body) {
         res.status(400).send({message: "No body in request!"});
         return;
@@ -15,7 +14,6 @@ function createTranslation (req, res, next) {
     var translation = new Translation({translation: req.body.translation || "no translation here"});
 
     translation.save(function(err, data) {
-        console.log("data is " + data);
         if(err) {
             console.log(err);
             res.status(500).send({message: "Some error occurred while creating the Translation."});

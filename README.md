@@ -71,6 +71,7 @@ Iterations:
         - another one at [MEANAppsFiles](https://github.com/joeeames/MEANAppsFiles) demo app
 - Mongoose 
     - [Express NodeJS](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+    - [REST tutorial](https://www.callicoder.com/node-js-express-mongodb-restful-crud-api-tutorial/)
     - [Mongoose start](http://mongoosejs.com/docs/guide.html)
     - [populate](http://mongoosejs.com/docs/populate.html) required referencing objects across collections
     - [mongoosatic](https://github.com/mongoosastic/mongoosastic) is Mongoose for Elasticsearch 

@@ -11,7 +11,7 @@ app.set('view engine', 'pug')
 // Load the routes ("controllers" -ish)
 // app.use(require('app/site/router'))
 app.use('/codebook/api', require('app/translation/router'))
-// word
+app.use('/codebook/api', require('app/word/router'))
 // document
 // chapter
 // paragraph

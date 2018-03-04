@@ -1,4 +1,4 @@
-# Codebook
+# Codebook - to translate into a code or jargon
 
 - in the collection `codebook`
 
@@ -15,8 +15,10 @@
         translation: "ungood",
     }
 
+    curl -H "Content-Type: application/json" -X POST \
+        -d '{"translation":"ungood","word":"bad"}' http://localhost:3000/codebook/api/words
 
-### with parts of speech
+### post MVP
 
 To do a proper translation, eventually a working engine would have to recognize the part of speech, 
 because of some homographs:
@@ -60,22 +62,26 @@ because of some homographs:
 
 - represents a word that appears in the dictionary
 - there is an instance for every valid word in the dictionary
-- to help condense conjugations, each points to a "root" word, or is the "root" itself
-
-- `translation` objects may have other properties relating them to each other
-
- 
-    {
-        translation: "ungood",
-        root: "good"
-    }
+- for MVP the class is mostly a repository for ES query logic
 
 
     {
         translation: "good"
     }
 
-# Documents
+
+### post MVP
+
+- `translation` objects may have other properties relating them to each other
+- to help condense conjugations, each points to a "root" word, or is the "root" itself
+ 
+ 
+    {
+        translation: "ungood",
+        root: "good"
+    }
+
+# Texts to translate
 
 - in the collection `canon`
 
