@@ -38,4 +38,26 @@ function getTranslations (req, res) {
 
 router.get('/translations', getTranslations)
 
+// TODO: search for translation "foo"
+// TODO: search for translation matching "*foo*"
+//  db.translations.aggregate( [ { $match : { translation : /foo/ } } ] );
+
+function searchTranslationsLike (req, res) {
+    Translation.findOne({translation: new RegExp(req.params.translationSearch, 'i') }, function (error, translation) {
+        if (error) {
+            log.error(error, 'error finding translations')
+            res.status(500).send(error)
+            return
+        }
+        res.json(translations)
+    })
+}
+
+// TODO: search for words matching translation "foo"
+//  db.words.aggregate( [ { $match : { translation : /foo/ } } ] );
+// TODO: 2 codebook file import/export
+// TODO: 3 canon models
+// TODO: 4 canon file import
+// TODO: 5 translation file export
+
 module.exports = router

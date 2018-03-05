@@ -63,8 +63,8 @@ function getWord(req, res) {
 router.get('/words/:wordId', getWord)
 
 // curl -H "Content-Type: application/json" -X GET http://localhost:3000/codebook/api/search/word/bad
-function searchWord(req, res) {
-    Word.findOne({'word': req.params.wordText}, "word translation", function(err, word) {
+function searchWordByText(req, res) {
+    Word.find({'word': req.params.wordText}, "word translation", function(err, word) {
         if(err) {
             console.log(err);
             if(err.kind === 'ObjectId') {
@@ -81,6 +81,9 @@ function searchWord(req, res) {
     });
 };
 
-router.get('/search/word/:wordText', searchWord)
+router.get('/search/wordText/:wordText', searchWordByText)
+
+// TODO: search for word "*foo*"
+// router.get('/search/wordLike/:wordSearch', searchWordByMatch)
 
 module.exports = router
