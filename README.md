@@ -8,15 +8,19 @@
 
 Make sure `mongod` is running!
 
-    node app/server.js
+    $ mongod &
+    $ node app/server.js
 
 ### Run the server with `nodemon`
 
 What this does: it restarts when there is a code change
 
 
-    ./node_modules/nodemon/bin/nodemon.js   app/server.js localhost 8080
+    $ ./node_modules/nodemon/bin/nodemon.js   app/server.js localhost 8080
 
+In this project this command is the default in the Jakefile:
+
+    $ jake
 
 ### Debug: a basic request
 
