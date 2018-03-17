@@ -15,3 +15,29 @@ task('run_dev_server', function (params) {
         console.log("*** Restarting due to", files);
     });
 });
+
+desc('up load test to database');
+task('upload_test_db', function (params) {
+    console.log('Loading test database');
+    console.log('TBI');
+    // mongoimport --db knamean --collection codebook --type csv --headerline --file test/fixtures/db/codebook-translations.csv
+    // https://javascriptexamples.info/code/jakefile-tutorial/ ??
+});
+
+desc('drop database');
+task('drop_db', function (params) {
+    console.log('Erasing all data from database');
+    console.log('TBI');
+});
+
+desc('upload test data to elasticsearch');
+task('upload_test_es', function (params) {
+    console.log('Loading elasticsearch data');
+    console.log('TBI');
+});
+
+desc('drop elasticsearch');
+task('drop_es', function (params) {
+    console.log('Erasing all data from elasticsearch');
+    console.log('TBI');
+});
