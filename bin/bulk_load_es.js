@@ -37,3 +37,30 @@ console.log(`Text file ${text_filename}`);
 // Load file as JSON and bulk load //
 /////////////////////////////////////
 
+var https = require('https')
+
+var options = {
+    "host": "localhost",
+    "path": "????" + req.body.request_id,
+    "method": "PUT",
+    "headers": {
+        "Authorization" : "Bearer " + req.body.bearer_token,
+        "Content-Type" : "application/json",
+    }
+}
+
+callback = function(response) {
+    var str = ''
+    response.on('data', function(chunk){
+        str += chunk
+    })
+
+    response.on('end', function(){
+        console.log(str)
+    })
+}
+
+var body = JSON.stringify({
+    status: 'accepted'
+});
+https.request(options, callback).end(body);
