@@ -1,6 +1,6 @@
 // node bin/bulk_load_es.js -p 800 -h foo.com -f filename.json
 
-const PORT_DEFAULT = 8080;
+const PORT_DEFAULT = 9200;
 const HOST_DEFAULT = 'localhost';
 
 function usage() {
@@ -33,34 +33,43 @@ console.log(`ES host ${host}`);
 // console.log(`JSON file ${json_filename}`);
 console.log(`Text file ${text_filename}`);
 
-/////////////////////////////////////
-// Load file as JSON and bulk load //
-/////////////////////////////////////
+///////////////////////
+// Load file as JSON //
+///////////////////////
 
-var https = require('https')
+function sendOne(text) {
 
-var options = {
-    "host": "localhost",
-    "path": "????" + req.body.request_id,
-    "method": "PUT",
-    "headers": {
-        "Authorization" : "Bearer " + req.body.bearer_token,
-        "Content-Type" : "application/json",
-    }
 }
 
-callback = function(response) {
-    var str = ''
-    response.on('data', function(chunk){
-        str += chunk
-    })
-
-    response.on('end', function(){
-        console.log(str)
-    })
-}
-
-var body = JSON.stringify({
-    status: 'accepted'
+require('fs').readFileSync(text_filename).toString().split('\n\n').forEach(function (line) {
+    console.log(`got line: ${line}`);
+    // sendOne(line);
 });
-https.request(options, callback).end(body);
+
+// var https = require('https')
+//
+// var options = {
+//     "host": "localhost",
+//     "path": "????" + req.body.request_id,
+//     "method": "PUT",
+//     "headers": {
+//         "Authorization" : "Bearer " + req.body.bearer_token,
+//         "Content-Type" : "application/json",
+//     }
+// }
+//
+// callback = function(response) {
+//     var str = ''
+//     response.on('data', function(chunk){
+//         str += chunk
+//     })
+//
+//     response.on('end', function(){
+//         console.log(str)
+//     })
+// }
+//
+// var body = JSON.stringify({
+//     status: 'accepted'
+// });
+// https.request(options, callback).end(body);
