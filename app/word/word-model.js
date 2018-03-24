@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
+// let mongoosastic = require('mongoosastic');
 
 const Schema = mongoose.Schema;
 const WordSchema = new Schema({
@@ -8,4 +9,7 @@ const WordSchema = new Schema({
 
 // could add more methods here
 
-module.exports = mongoose.model('Word', WordSchema);
+let Word = mongoose.model('Word', WordSchema);
+// Word.plugin(mongoosastic);
+
+module.exports = Word;

@@ -1,6 +1,6 @@
-var Translation = require('./translation-model')
-var log = require('bole')('translation/router')
-var router = require('express').Router()
+let Translation = require('./translation-model')
+let log = require('bole')('translation/router')
+let router = require('express').Router()
 
 function createTranslation (req, res, next) {
     if(!req.body) {
@@ -11,7 +11,7 @@ function createTranslation (req, res, next) {
         return;
     }
 
-    var translation = new Translation({translation: req.body.translation || "no translation here"});
+    let translation = new Translation({translation: req.body.translation || "no translation here"});
 
     translation.save(function(err, data) {
         if(err) {
@@ -21,7 +21,7 @@ function createTranslation (req, res, next) {
             res.send(data);
         }
     });
-};
+}
 
 router.post('/translations', createTranslation)
 
@@ -60,4 +60,4 @@ function searchTranslationsLike (req, res) {
 // TODO: 4 canon file import
 // TODO: 5 translation file export
 
-module.exports = router
+module.exports = router;

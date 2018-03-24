@@ -38,38 +38,11 @@ console.log(`Text file ${text_filename}`);
 ///////////////////////
 
 function sendOne(text) {
-
+    console.log(`sending line: ${text}`);
 }
 
+// send every line in text_filename
 require('fs').readFileSync(text_filename).toString().split('\n\n').forEach(function (line) {
-    console.log(`got line: ${line}`);
-    // sendOne(line);
+    sendOne(line);
+    process.exit(0); // debug
 });
-
-// var https = require('https')
-//
-// var options = {
-//     "host": "localhost",
-//     "path": "????" + req.body.request_id,
-//     "method": "PUT",
-//     "headers": {
-//         "Authorization" : "Bearer " + req.body.bearer_token,
-//         "Content-Type" : "application/json",
-//     }
-// }
-//
-// callback = function(response) {
-//     var str = ''
-//     response.on('data', function(chunk){
-//         str += chunk
-//     })
-//
-//     response.on('end', function(){
-//         console.log(str)
-//     })
-// }
-//
-// var body = JSON.stringify({
-//     status: 'accepted'
-// });
-// https.request(options, callback).end(body);
