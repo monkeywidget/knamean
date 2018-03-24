@@ -43,18 +43,7 @@ console.log(`Text file ${text_filename}`);
 
 function sendOne(text) {
     console.log(`sending line: ${text}`);
-    let Paragraph = require('../app/paragraph/paragraph-model')
-
-    let paragraph = new Paragraph({paragraph: text});
-
-    paragraph.save(function() {
-        res.redirect('/');
-        paragraph.on('es-indexed', function () {
-            console.log('document indexed');
-        });
-    });
-
-    console.log(`Done!`);
+    console.log(`TBI`);
 }
 
 // send every line in text_filename

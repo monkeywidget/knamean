@@ -1,6 +1,6 @@
-var Word = require('./word-model')
-var log = require('bole')('word/router')
-var router = require('express').Router()
+let Word = require('./word-model')
+// let log = require('bole')('word/router') TODO: debug
+let router = require('express').Router()
 
 // curl -H "Content-Type: application/json" -X POST
 //      -d '{"translation":"ungood","word":"bad"}' http://localhost:3000/codebook/api/words
@@ -23,7 +23,7 @@ function createWord (req, res, next) {
             res.send(data);
         }
     });
-};
+}
 
 router.post('/words', createWord)
 
@@ -31,7 +31,7 @@ router.post('/words', createWord)
 function getWords (req, res) {
     Word.find(function (error, words) {
         if (error) {
-            log.error(error, 'error finding words')
+            console.log.error(error, 'error finding words')
             res.status(500).send(error)
             return
         }
