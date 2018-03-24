@@ -13,7 +13,7 @@ function createWord (req, res, next) {
         return;
     }
 
-    var word = new Word({word: req.body.word, translation: req.body.translation});
+    let word = new Word({word: req.body.word, translation: req.body.translation});
 
     word.save(function(err, data) {
         if(err) {

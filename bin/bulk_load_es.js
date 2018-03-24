@@ -28,6 +28,10 @@ if ((typeof text_filename === "string") && (text_filename.length > 0)) {
     usage();
 }
 
+////////////////////////////////
+// Log all the CLI parameters //
+////////////////////////////////
+
 console.log(`ES port ${port}`);
 console.log(`ES host ${host}`);
 // console.log(`JSON file ${json_filename}`);
@@ -39,6 +43,18 @@ console.log(`Text file ${text_filename}`);
 
 function sendOne(text) {
     console.log(`sending line: ${text}`);
+    let Paragraph = require('../app/paragraph/paragraph-model')
+
+    let paragraph = new Paragraph({paragraph: text});
+
+    paragraph.save(function() {
+        res.redirect('/');
+        paragraph.on('es-indexed', function () {
+            console.log('document indexed');
+        });
+    });
+
+    console.log(`Done!`);
 }
 
 // send every line in text_filename

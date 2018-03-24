@@ -34,6 +34,7 @@ desc('upload test data to elasticsearch');
 task('upload_test_es', function (params) {
     console.log('Loading elasticsearch data');
     console.log('TBI');
+    // node bin/bulk_load_es.js  -f sources/lorem-12.txt
 });
 
 desc('drop elasticsearch');
