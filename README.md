@@ -32,10 +32,12 @@ In this project this command is the default in the Jakefile:
 Iterations:
 - ✔ hello world
 - ✔ define Mongo schema
+- ⌛ ES test data for paragraphs, words ('bulk_load_es.js')
+- ES API with JS (mirror Mongo)
 - ⌛ set up express with mongoose models and routes
 - ETL: CSV to MongoDB
 - BDD with chai
-- ES implementation: analysis with ES
+- analysis with ES
 - React front end
 - convert MongoDB implementation to AWS EC2
 - containerize and redeploy to AWS ECS
